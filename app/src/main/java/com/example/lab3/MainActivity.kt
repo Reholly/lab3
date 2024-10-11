@@ -1,7 +1,6 @@
 package com.example.lab3
 
 import android.os.Bundle
-import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -31,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         setOperatorListeners()
     }
 
-    private fun numberButtonClickListener(numberString: String) {
+    private fun numberListener(numberString: String) {
         addToSequence(numberString)
     }
 
@@ -89,7 +88,7 @@ class MainActivity : AppCompatActivity() {
         ).forEach {
             with(findViewById<TextView>(it)) {
                 setOnClickListener {
-                    numberButtonClickListener(this.text.toString())
+                    numberListener(this.text.toString())
                 }
             }
         }
